@@ -106,7 +106,7 @@ Número a adivinar: 30.
 "¡Felicidades! ¡Haz adivinado el número! El número es 30 y lo adivinaste en 3 intentos.
 ```
 
-# Ejercicio 5 (Opcional)
+# Ejercicio 6 (Opcional)
 
 En la Universidad Nacional de Ingeniería, la red local entre los servidores no siempre funciona correctamente. Se descubrió que cuando se envían dos mensajes idénticos, estos se combinan, haciendo que ambos mensajes se conviertan en uno. En esta combinación, el final del primer mensaje coincide con el inicio del segundo, y esta superposición solo puede ocurrir si los caracteres son iguales.
 
