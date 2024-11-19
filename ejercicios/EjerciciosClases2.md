@@ -80,3 +80,86 @@ Agrega elementos a las pilas, desapila elementos, obtén la cima de las pilas y 
 ## 1. Definición de la Clase ObtenerDatosMap
 
 Recibira un Map con diferentes tipos de datos, debe de crear un metodo que reciba el Map y la clave, y devuelva el valor de la clave.
+
+
+# **Ejercicio: Sistema de Gestión de Vehículos**
+
+## **Descripción**
+
+El objetivo de este ejercicio es desarrollar un sistema para gestionar una flota de vehículos utilizando **interfaces**. Se deberán implementar diferentes tipos de vehículos (automóviles, bicicletas, camiones) y gestionar sus funcionalidades específicas, como acelerar, transportar carga o realizar mantenimiento.
+
+## **Interfaces**
+
+### `Vehiculo`
+- **Descripción**: Interfaz base para todos los vehículos.
+- **Métodos**:
+  - `acelerar()`: Permite al vehículo aumentar su velocidad.
+  - `detener()`: Permite al vehículo detenerse.
+
+### `TransportePasajeros`
+- **Descripción**: Interfaz para vehículos que transportan pasajeros.
+- **Métodos**:
+  - `cargarPasajeros(int cantidad)`: Permite cargar pasajeros en el vehículo.
+  - `descargarPasajeros(int cantidad)`: Permite descargar pasajeros del vehículo.
+
+### `TransporteCarga`
+- **Descripción**: Interfaz para vehículos que transportan carga.
+- **Métodos**:
+  - `cargarCarga(double peso)`: Permite cargar peso en el vehículo.
+  - `descargarCarga(double peso)`: Permite descargar peso del vehículo.
+
+## **Clases**
+
+### `VehiculoBase` (implementa `Vehiculo`)
+- **Descripción**: Clase base para representar un vehículo genérico.
+- **Atributos**:
+  - `marca`: Marca del vehículo.
+  - `modelo`: Modelo del vehículo.
+  - `velocidad`: Velocidad actual del vehículo.
+- **Métodos**:
+  - Implementación genérica de los métodos `acelerar` y `detener`.
+
+### `Automovil` (extiende `VehiculoBase`, implementa `TransportePasajeros`)
+- **Descripción**: Representa un automóvil que transporta pasajeros.
+- **Atributos**:
+  - `capacidadPasajeros`: Capacidad máxima de pasajeros.
+  - `pasajerosActuales`: Número actual de pasajeros en el vehículo.
+- **Métodos**:
+  - Implementación de los métodos de `TransportePasajeros`.
+
+### `Camion` (extiende `VehiculoBase`, implementa `TransporteCarga`)
+- **Descripción**: Representa un camión que transporta carga.
+- **Atributos**:
+  - `capacidadCarga`: Capacidad máxima de carga en toneladas.
+  - `cargaActual`: Peso actual de la carga transportada.
+- **Métodos**:
+  - Implementación de los métodos de `TransporteCarga`.
+
+### `Bicicleta` (extiende `VehiculoBase`)
+- **Descripción**: Representa una bicicleta. No transporta carga ni pasajeros.
+- **Atributos**:
+  - `tipo`: Tipo de bicicleta (e.g., montaña, carretera).
+- **Métodos**:
+  - Uso genérico de los métodos de `Vehiculo`.
+
+### `Camioneta` (extiende `VehiculoBase`, implementa `TransportePasajeros`, `TransporteCarga`)
+- **Descripción**: Representa una camioneta que puede transportar tanto pasajeros como carga.
+- **Atributos**:
+  - `capacidadPasajeros`: Capacidad máxima de pasajeros.
+  - `capacidadCarga`: Capacidad máxima de carga en toneladas.
+  - `pasajerosActuales`: Número actual de pasajeros.
+  - `cargaActual`: Peso actual de la carga transportada.
+- **Métodos**:
+  - Implementación de los métodos de ambas interfaces.
+
+## **Funcionalidad Principal**
+
+En la clase `Main`, se deberá:
+
+1. Crear instancias de las clases `Automovil`, `Camion`, `Bicicleta` y `Camioneta`.
+2. Simular acciones específicas, como:
+   - Acelerar y detener vehículos.
+   - Cargar y descargar pasajeros en automóviles y camionetas.
+   - Cargar y descargar carga en camiones y camionetas.
+3. Mostrar los estados actuales de cada vehículo después de realizar las acciones (e.g., velocidad, carga actual, pasajeros actuales).
+4. Demostrar cómo la camioneta puede desempeñar funciones de transporte tanto de carga como de pasajeros.
