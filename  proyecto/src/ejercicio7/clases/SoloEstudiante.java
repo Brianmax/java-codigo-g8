@@ -8,7 +8,7 @@ import java.util.List;
 public class SoloEstudiante extends Persona implements Estudiante {
     private List<Curso> cursos;
 
-    SoloEstudiante(String nombre) {
+    public SoloEstudiante(String nombre) {
         super(nombre);
         this.cursos = new ArrayList<>();
     }

@@ -11,7 +11,7 @@ public class EstudianteProfesor extends Persona implements Estudiante, Profesor 
     private List<Curso> cursosInscritos;
     private List<Curso> cursosImpartidos;
 
-    EstudianteProfesor(String nombre) {
+    public EstudianteProfesor(String nombre) {
         super(nombre);
         this.cursosImpartidos = new ArrayList<>();
         this.cursosInscritos = new ArrayList<>();

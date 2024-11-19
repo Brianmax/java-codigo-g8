@@ -8,14 +8,14 @@ import java.util.List;
 public class SoloProfesor extends Persona implements Profesor {
     private List<Curso> cursosImpartidos;
 
-    SoloProfesor(String nombre) {
+    public SoloProfesor(String nombre) {
         super(nombre);
         this.cursosImpartidos = new ArrayList<>();
     }
 
     @Override
     public void calificarExamen() {
-
+        System.out.println("SoloProfesor calificando examen");
     }
 
     @Override
