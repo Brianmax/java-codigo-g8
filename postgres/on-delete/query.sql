@@ -48,6 +48,8 @@ CREATE TABLE IF NOT EXISTS orders (
     order_date DATE NOT NULL
 );
 
+
+--- item order sin on delete cascade
 CREATE TABLE IF NOT EXISTS item_order (
     id_item SERIAL PRIMARY KEY,
     product VARCHAR(255),
@@ -59,6 +61,20 @@ CREATE TABLE IF NOT EXISTS item_order (
     FOREIGN KEY(order_fk) REFERENCES orders(order_id)
 );
 
+-- eliminamos la tabla
+DROP TABLE IF EXISTS item_order;
+
+-- creamos la tabla nuevamente, pero con la configuracion ON DELETE CASCADE
+CREATE TABLE IF NOT EXISTS item_order (
+    id_item SERIAL PRIMARY KEY,
+    product VARCHAR(255),
+    qty INTEGER,
+    price FLOAT,
+
+    order_fk INTEGER,
+
+    FOREIGN KEY(order_fk) REFERENCES orders(order_id) ON DELETE CASCADE
+);
 
 INSERT INTO orders(descripcion, order_date) VALUES('order numero 1', '2024-10-12');
 INSERT INTO orders(descripcion, order_date) VALUES('ordern numero 2', '2024-10-15');
@@ -77,3 +93,12 @@ SELECT * FROM item_order;
 
 -- eliminamos un order
 
+DELETE FROM orders WHERE order_id = 1;
+
+-- traemos los registrosd de orders
+
+SELECT * FROM orders;
+
+-- traemos los registros de la tabla item-order
+
+SELECT * FROM item_order;
