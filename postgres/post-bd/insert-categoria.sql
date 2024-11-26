@@ -1,0 +1,15 @@
+insert into categoria (titulo, descripcion) values ('IT Solutions', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
+insert into categoria (titulo, descripcion) values ('Kantar', 'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.');
+insert into categoria (titulo, descripcion) values ('Dublin Core', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.');
+insert into categoria (titulo, descripcion) values ('WHIMS', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.');
+insert into categoria (titulo, descripcion) values ('FDMA', 'Phasellus in felis. Donec semper sapien a libero. Nam dui.');
+insert into categoria (titulo, descripcion) values ('Otoplasty', 'In congue. Etiam justo. Etiam pretium iaculis justo.');
+insert into categoria (titulo, descripcion) values ('Volunteer Training', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.');
+insert into categoria (titulo, descripcion) values ('Nuclear Engineering', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
+insert into categoria (titulo, descripcion) values ('Field Work', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
+insert into categoria (titulo, descripcion) values ('ISTQB', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.');
+insert into categoria (titulo, descripcion) values ('PFT', 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.');
+insert into categoria (titulo, descripcion) values ('News Writing', 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.');
+insert into categoria (titulo, descripcion) values ('IT Governance', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.');
+insert into categoria (titulo, descripcion) values ('HRIS Database Management', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.');
+insert into categoria (titulo, descripcion) values ('SBA 504', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
