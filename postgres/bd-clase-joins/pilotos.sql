@@ -248,3 +248,5 @@ insert into pilotos (nombre, apellido, estado) values ('aroughley1a', 'Roughley'
 insert into pilotos (nombre, apellido, estado) values ('wthackston1b', 'Thackston', false);
 insert into pilotos (nombre, apellido, estado) values ('lgiraudel1c', 'Giraudel', false);
 insert into pilotos (nombre, apellido, estado) values ('tlyes1d', 'Lyes', false);
+
+SELECT * FROM pilotos;

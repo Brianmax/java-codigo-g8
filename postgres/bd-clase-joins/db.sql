@@ -1,3 +1,4 @@
+
 create table if not exists aerolineas(
 	id_aerolinea serial primary key,
 	nombre varchar(100)

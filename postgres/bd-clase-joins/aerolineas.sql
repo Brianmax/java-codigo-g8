@@ -98,3 +98,5 @@ insert into aerolineas (nombre) values ('Halvorson, Medhurst and Konopelski');
 insert into aerolineas (nombre) values ('Koch LLC');
 insert into aerolineas (nombre) values ('Toy, Nicolas and Balistreri');
 insert into aerolineas (nombre) values ('McClure Group');
+
+

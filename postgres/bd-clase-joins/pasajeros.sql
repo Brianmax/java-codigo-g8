@@ -998,3 +998,5 @@ insert into pasajeros (nombre, apellido) values ('Kristofor', 'Hazleton');
 insert into pasajeros (nombre, apellido) values ('Dolph', 'Vanyard');
 insert into pasajeros (nombre, apellido) values ('Allister', 'Bleas');
 insert into pasajeros (nombre, apellido) values ('Ody', 'Hebson');
+
+SELECT * FROM pasajeros;
