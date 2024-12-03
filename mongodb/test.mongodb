@@ -1,0 +1,272 @@
+use('db1')
+db.universidades.insertMany(
+    [
+    {
+        nombre: "PUCP",
+        carreras: ["Ing Mecanica", "Ing Mecatronica", "Derecho", "Psicologia"],
+        alumnos: 13000,
+        direccion: {
+            calle: "Av Universitaria",
+            numero: 499,
+            distrito: "San Isidro",
+            region: "Lima"
+        },
+        presupuesto: 15000000
+    },
+    {
+        nombre: "UNMSM",
+        carreras: ["Ing Mecanica", "Ing Mecatronica", "Derecho", "Administracion"],
+        alumnos: 20000,
+        direccion: {
+            calle: "Av Crisol",
+            numero: 200,
+            distrito: "Miraflores",
+            region: "Lima"
+        },
+        presupuesto: 12000000
+    },
+    {
+        nombre: "UPCH",
+        carreras: ["Medicina", "Enfermeria", "Farmacia", "Obstetriz"],
+        alumnos: 10000,
+        direccion: {
+            calle: "Av Alcides Carrion",
+            numero: 169,
+            distrito: "Surco",
+            region: "Lima"
+        },
+        presupuesto: 20000000
+    },
+    {
+        nombre: "UNSA",
+        carreras: ["Ing Mecanica", "Ing Mecatronica", "Ing Sistemas", "Ciencia de la Computacion"],
+        alumnos: 80000,
+        direccion: {
+            calle: "Av Independencia",
+            numero: 165,
+            distrito: "Cercado",
+            region: "Arequipa"
+        },
+        presupuesto: 10000000
+    },
+    {
+        nombre: "UCSP",
+        carreras: ["Ing Ambiental", "Ing Mecatronica", "Derecho", "Ciencia de la Computacion"],
+        alumnos: 7000,
+        direccion: {
+            calle: "Av Quinta Vivanco",
+            numero: 170,
+            distrito: "Alto Selva Alegre",
+            region: "Arequipa"
+        },
+        presupuesto: 10000000
+    },
+    {
+        nombre: "UNSAAC",
+        carreras: ["Ing Mecanica", "Ing Mecatronica", "Derecho", "Antropologia"],
+        alumnos: 7000,
+        direccion: {
+            calle: "Av Aviacion",
+            numero: 200,
+            distrito: "Cercado",
+            region: "Cusco"
+        },
+        presupuesto: 9000000
+    }]
+)
+
+
+// traer los documentos de las universidades
+// que pertenencen a lima
+
+// traer los documentos de las universidades
+// que pertenencen a arequipa
+
+// traer los documentos de las universidades
+// que pertenencen a cusco
+
+use('db1')
+db.universidades.find(
+    {
+        "direccion.region": "Lima"
+    }
+)
+
+// opearadores de comparacion
+
+// gt, lt, lte, gte: greater than, less than
+
+// traer todos los dcoumentos en los que el
+// presupuesto sea mayor a 10M
+
+use('db1')
+db.universidades.find(
+    {
+        presupuesto: {
+            $gt: 10000000
+        }
+    }
+)
+
+// traer las universidades que tengan
+// numero de alumnos mayor igual a 12K
+// o que el presupeusto supere los 12M\
+// pero ademas la universidad debe de estar en la
+// region lima
+
+
+use("db1")
+db.universidades.find(
+    {
+        $and: [
+            {
+                $or: [
+                    {alumnos: {$gte: 12000}},
+                    {presupuest:{$gte: 12000000}}
+                ]
+            },
+            {
+                "direccion.region": "Lima"
+            }
+        ]
+    }
+);
+
+// traer las universidades que tengan
+// numero de alumnos mayor igual a 12K
+// y que el presupeusto supere los 12M\
+// pero ademas la universidad debe de estar en la
+// region lima
+
+use("db1")
+db.universidades.find(
+    {
+        alumnos: {$gte: 12000},
+        presupuesto:{$gte: 12000000},
+        "direccion.region": "Lima"
+    }
+);
+
+
+// operador set
+
+
+use('db1')
+db.universidades.updateMany(
+    // filtro
+    {
+        nombre: 'UNSA'
+    },
+    // actualizacion
+    {
+        $set: {
+            alumnos: 14000
+        }
+    }
+)
+
+use('db1')
+db.universidades.find(
+    {
+    }
+)
+
+use('db1')
+db.universidades.updateMany(
+    // filtro
+    {
+        // condicion para 
+        // identificar a un hombre
+    },
+    // actualizacion
+    {
+        $set: {
+            estado: 1
+        }
+    }
+)
+
+use('db1')
+db.universidades.updateMany(
+    // filtro
+    {
+        // condicion para 
+        // identificar a un mujer
+    },
+    // actualizacion
+    {
+        $set: {
+            estado: 0
+        }
+    }
+)
+
+
+use('db1')
+db.universidades.updateMany(
+    // filtro
+    {
+        nombre: 'UNSA'
+    },
+    // actualizacion
+    {
+        $set: {
+            profesores: 170
+        }
+    }
+)
+
+
+use('db1')
+db.universidades.updateMany(
+    // filtro
+    {
+    },
+    // actualizacion
+    {
+        $set: {
+            fechaCreacion: new Date()
+        }
+    }
+)
+
+use('db1')
+db.universidades.aggregate(
+    {
+        $limit: 3
+    },
+    {
+        $set: {
+            random: false
+        }
+    },
+    {
+        $merge: {
+            into: "universidades"
+        }
+    }
+)
+
+use('db1')
+db.universidades.find()
+
+// rename
+
+use('db1')
+db.universidades.updateMany(
+    {
+
+    },
+    {
+        $rename: {
+            presupuesto: "presupuestoTotal"
+        }
+    }
+)
+
+// aggregate
+
+
+
+// upsert- update or insert
+

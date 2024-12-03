@@ -1,0 +1,242 @@
+use('db1')
+
+db.createCollection("usuarios")
+
+
+use('db1')
+db.usuarios.insertOne(
+    {
+        nombre: "George",
+        maxi: "Maxi",
+        username: "gmaxi",
+        password: "pass123"
+    }
+)
+
+use('db1')
+db.usuarios.find().count()
+
+use('db1')
+db.usuarios.insertMany(
+    [
+        {
+            nombre: "Miguel",
+            apellido: "Zegarra",
+            username: "mzegarra",
+            password: "pass123"
+        },
+        {
+            nombre: "Jose",
+            apellido: "Chavez",
+            username: "jchavez",
+            password: "pass123"
+        }
+    ]
+)
+
+use('db1')
+db.usuarios.find()
+
+use('db1')
+db.usuarios.insertOne(
+    {
+        nombre: "George",
+        maxi: "Maxi",
+        username: "gmaxi",
+        password: "pass123",
+        salario: 3000
+    }
+)
+
+
+use('db1')
+db.usuarios.insertMany(
+    [{
+        "nombre": "Lamar",
+        "apellido": "Sywell",
+        "username": "lsywell0",
+        "password": "$2a$04$VlmQX5RSMey6RD96OmQJfeHlOamzdq.FSpDmG7KpqWmOAmPAvjX2a"
+      }, {
+        "nombre": "Willabella",
+        "apellido": "Aldcorne",
+        "username": "waldcorne1",
+        "password": "$2a$04$iDabGkRPMP9/Zuqtm27BkeWD7ezssVvTZrwvQfMbplds3y8riJKoW"
+      }, {
+        "nombre": "Fenelia",
+        "apellido": "Ledley",
+        "username": "fledley2",
+        "password": "$2a$04$bbxQow2S7ktYooQ0ZqFm..EQz7wGKCe8r1jLSTjY2kc9IrcZq.pqy"
+      }, {
+        "nombre": "Reynard",
+        "apellido": "Danher",
+        "username": "rdanher3",
+        "password": "$2a$04$9qrbHjJaor04EW/fF8GFV.JIf1oQ0nedd6IWlLKdHoHXqWVcnx99a"
+      }, {
+        "nombre": "Vance",
+        "apellido": "Josham",
+        "username": "vjosham4",
+        "password": "$2a$04$7RmPTSItTu1OV/OJdM9Ei..HgctPop4tczJwHS6/kdDFzU5F6DECy"
+      }, {
+        "nombre": "Othilia",
+        "apellido": "De Pero",
+        "username": "odepero5",
+        "password": "$2a$04$pgF1Qcu9oYqzKuTBNI0Hau1D9jm3wp1VL.XRTZC4/iyQjERE9Auj6"
+      }, {
+        "nombre": "Johnette",
+        "apellido": "Blakebrough",
+        "username": "jblakebrough6",
+        "password": "$2a$04$sT2Z2wWlKxk/7FmOPJe8x.3XfkAbRaC7x7xiFliIxw0lcAL7xHQWq"
+      }, {
+        "nombre": "Raychel",
+        "apellido": "Dean",
+        "username": "rdean7",
+        "password": "$2a$04$R.hpCkCa.uOrDQ3WlcFk3ewIKHrv9WpdWUcDj9HZ3PE.YM2gaZIcy"
+      }, {
+        "nombre": "Adolphe",
+        "apellido": "Bysaker",
+        "username": "abysaker8",
+        "password": "$2a$04$gc9ove/DloCOXmsTuhSdYuqDq0.OqG3K1RN6HJlmazXuxu9DTsioe"
+      }, {
+        "nombre": "Petey",
+        "apellido": "Mandal",
+        "username": "pmandal9",
+        "password": "$2a$04$PgzZ3rgcn2rcxHgYFqLJS.Au0Ovv/UUqBpWfF.a3q9s.fqU4e4JgW"
+      }, {
+        "nombre": "Bard",
+        "apellido": "Charles",
+        "username": "bcharlesa",
+        "password": "$2a$04$CnbkwJrk8pnj.hQgKCEmP.s8Jgx.qxJ13e3EtHGXrEwsL/2vcCUpO"
+      }, {
+        "nombre": "Valma",
+        "apellido": "Skully",
+        "username": "vskullyb",
+        "password": "$2a$04$W2RGxgwccwzdXc0Fyn6ahu9S.Mq2z.bDDt43z5pgkks3pAwS0BVnC"
+      }, {
+        "nombre": "Karlyn",
+        "apellido": "Izakov",
+        "username": "kizakovc",
+        "password": "$2a$04$3Kuy5FBJmWL1eY7NZkMmXOBMTBHMzSbIOA.aFVqRHTwVUVaRFSn3m"
+      }, {
+        "nombre": "Cristine",
+        "apellido": "Brooksby",
+        "username": "cbrooksbyd",
+        "password": "$2a$04$6fqdHgWHLS.EbH5.1C7Sm.8JSp0irH1drRX82T0OaMtd3kP.sX0Fe"
+      }, {
+        "nombre": "Rebeca",
+        "apellido": "Heathwood",
+        "username": "rheathwoode",
+        "password": "$2a$04$ccoNyBjdLU5.kgkYZgv5Ne0e4I22DfPmK5.KcN4Z9aCGyrFmCfFcS"
+      }, {
+        "nombre": "Jessalyn",
+        "apellido": "Pic",
+        "username": "jpicf",
+        "password": "$2a$04$u7iaD1yVqzjS20Uo3PH1j.UoH7seGKFAhvLca3MYOnAsfWK/vt5Li"
+      }, {
+        "nombre": "Leif",
+        "apellido": "Klosa",
+        "username": "lklosag",
+        "password": "$2a$04$GiuKPgf5cNZhWU2Dyvzv/ugE0MltYvOIdDQbduv0kSVDaLw4Z51La"
+      }, {
+        "nombre": "Elston",
+        "apellido": "Romanini",
+        "username": "eromaninih",
+        "password": "$2a$04$b88u9/NQRr1C1aHf.66gReBUYyjDMARKETIZQpluhdIi0FtBRlKiq"
+      }, {
+        "nombre": "Heida",
+        "apellido": "Edridge",
+        "username": "hedridgei",
+        "password": "$2a$04$sNxhp/k75dwXP.hzYKamfuOShMEoBwvGopdZvNN8fE.j.yw9cxShK"
+      }, {
+        "nombre": "Wilhelm",
+        "apellido": "McColl",
+        "username": "wmccollj",
+        "password": "$2a$04$Iie0vuLZpVb2i5u5Ehu4QeNXUxmE4UIz5U3JppJdUg1.aH/5kv.AG"
+      }]
+)
+
+
+use('db1')
+db.usuarios.find(
+    {
+        nombre: "George",
+        salario: 3000
+    }
+)
+
+
+use('db1')
+db.universidades.insertMany(
+    [
+    {
+        nombre: "PUCP",
+        carreras: ["Ing Mecanica", "Ing Mecatronica", "Derecho", "Psicologia"],
+        alumnos: 13000,
+        direccion: {
+            calle: "Av Universitaria",
+            numero: 499,
+            distrito: "San Isidro",
+            region: "Lima"
+        },
+        presupuesto: 15000000
+    },
+    {
+        nombre: "UNMSM",
+        carreras: ["Ing Mecanica", "Ing Mecatronica", "Derecho", "Administracion"],
+        alumnos: 20000,
+        direccion: {
+            calle: "Av Crisol",
+            numero: 200,
+            distrito: "Miraflores",
+            region: "Lima"
+        },
+        presupuesto: 12000000
+    },
+    {
+        nombre: "UPCH",
+        carreras: ["Medicina", "Enfermeria", "Farmacia", "Obstetriz"],
+        alumnos: 10000,
+        direccion: {
+            calle: "Av Alcides Carrion",
+            numero: 169,
+            distrito: "Surco",
+            region: "Lima"
+        },
+        presupuesto: 20000000
+    },
+    {
+        nombre: "UNSA",
+        carreras: ["Ing Mecanica", "Ing Mecatronica", "Ing Sistemas", "Ciencia de la Computacion"],
+        alumnos: 80000,
+        direccion: {
+            calle: "Av Independencia",
+            numero: 165,
+            distrito: "Cercado",
+            region: "Arequipa"
+        },
+        presupuesto: 10000000
+    },
+    {
+        nombre: "UCSP",
+        carreras: ["Ing Ambiental", "Ing Mecatronica", "Derecho", "Ciencia de la Computacion"],
+        alumnos: 7000,
+        direccion: {
+            calle: "Av Quinta Vivanco",
+            numero: 170,
+            distrito: "Alto Selva Alegre",
+            region: "Arequipa"
+        },
+        presupuesto: 10000000
+    },
+    {
+        nombre: "UNSAAC",
+        carreras: ["Ing Mecanica", "Ing Mecatronica", "Derecho", "Antropologia"],
+        alumnos: 7000,
+        direccion: {
+            calle: "Av Aviacion",
+            numero: 200,
+            distrito: "Cercado",
+            region: "Cusco"
+        },
+        presupuesto: 9000000
+    }]
+)

@@ -1,0 +1,14 @@
+{
+    "nombre": "George",
+    "apellido": "Maxi",
+    "edad": 27,
+    "estatura": 1.75,
+    "amigos": ["Rafael", "Jose"],
+    "adulto": true,
+    "direccion": {
+        "calle": "aviacion",
+        "numero": 203,
+        "distrito": "Cercado",
+        "provincia": "Arequipa"
+    }
+}
