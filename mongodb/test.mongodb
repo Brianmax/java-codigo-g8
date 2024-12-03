@@ -267,6 +267,112 @@ db.universidades.updateMany(
 // aggregate
 
 
+// return los estados con una poblacion
+// mayor o igual a 10M
 
-// upsert- update or insert
+use('sample_training')
+db.zips.aggregate(
+    {
+        $group: {
+            _id: "$state",
+            totalPop: { 
+                $sum: "$pop"
+            }
+        }
+    },
+    {
+        $match: {
+            totalPop: {
+                $gte: 10000000
+            }
+        }
+    } 
+)
 
+// retornar la poblacion promedio de cada estado
+// $avg :"pop"
+
+use('sample_training')
+db.zips.aggregate(
+    {
+        $group: {
+            _id: {
+                state: "$state",
+                city: "$city"
+            },
+            pop: {
+                $sum: "$pop"
+            }
+        }
+    },
+    {
+        $group: {
+            _id: "$_id.state",
+            avgPop: {
+                $avg: "$pop"
+            }
+        }
+    }
+)
+
+
+use('sample_training')
+db.zips.find(
+    {
+        city: "HALEDON"
+    },
+    // projection
+    {
+        _id: false
+    }
+)
+
+
+use('db1')
+db.createCollection('user', {
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            properties: {
+                nombre: {
+                    bsonType: 'string'
+                },
+                apellido: {
+                    bsonType: 'string'
+                },
+                password: {
+                    bsonType: 'string'
+                },
+                username: {
+                    bsonType: 'string'
+                }, 
+                productos: {
+                    bsonType: 'array',
+                    items: {
+                        bsonType: 'object',
+                        properties: {
+                            nombre_producto: {
+                                bsonType: 'string'
+                            },
+                            precio: {
+                                bsonType: 'double'
+                            },
+                            cantidad: {
+                                bsonType: 'int'
+                            }
+                        }
+                    }
+                },
+                direcciones: {
+
+                }
+            }
+        }
+    }
+})
+
+// direcciones:
+// calle --> string
+// distrito --> string
+// departamento --> int
+// provincia --> string
