@@ -26,7 +26,7 @@ Par
 ```
 
 # Ejercicio 2
-Para un número entero n, determinar si es positivo, negativo o cero. En caso de ser positivo, imprimir "Positivo", en caso de ser negativo, imprimir "Negativo".
+Para un número entero n, determinar si es positivo, negativo o cero. En caso de ser positivo, imprimir "Positivo", en caso de ser negativo, imprimir "Negativo", en caso de ser cero, imprimir cero.
 ## Input
 ```
 5
