@@ -83,6 +83,7 @@ Tabla de multiplicación del 2:
 Dado un número entero `n`, realizar las siguientes operaciones:
 - Si `n` es par, dividirlo entre 2.
 - Si `n` es impar, multiplicarlo por 3 y sumar 1.
+  
 Repetir el proceso hasta que `n` sea 1.
 
 # Ejercicio 15
